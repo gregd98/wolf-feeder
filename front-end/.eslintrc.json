@@ -1,0 +1,123 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb/hooks"
+  ],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "parser": "@babel/eslint-parser",
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "tsx": true
+    },
+    "requireConfigFile" : "false",
+    "babelOptions": {
+      "configFile": "./.babelrc"
+    }
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      },
+      "babel-module": {}
+    }
+  },
+  "plugins": ["react-hooks", "module-resolver"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "sessionStorage": true,
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "IntersectionObserver": true,
+    "fetch": true,
+    "FormData": true
+  },
+  "rules": {
+    "semi": [2, "always"],
+    "quotes": [2, "single"],
+    "no-multi-spaces": 0,
+    "no-tabs": 0,
+    "airbnb/no-tabs": 0,
+    "indent": [2, "tab", {
+      "SwitchCase": 1,
+      "MemberExpression": 1,
+      "ArrayExpression": "first",
+      "FunctionDeclaration": {"parameters": "first"},
+      "ignoredNodes": ["TemplateLiteral"]
+    }],
+    "one-var": 0,
+    "no-console": [1, { "allow": ["warn", "error"] }],
+    "linebreak-style": 0,
+    "no-undef": [0],
+    "no-undefined": 1,
+    "no-unused-vars": 0,
+    "no-restricted-globals": "off",
+    "default-param-last": 0,
+    "default-case-last": 0,
+    "react/forbid-prop-types": 0,
+    "import/prefer-default-export": 0,
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-no-useless-fragment": 0,
+    "import/extensions": "off",
+    "no-use-before-define": "off",
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 1,
+    "react/jsx-indent": [2, "tab"],
+    "react/jsx-indent-props": [2, "tab"],
+    "react/jsx-props-no-spreading": [1, {"custom": "ignore"}],
+    "react/prop-types": 0,
+    "react/no-array-index-key": 0,
+    "react/no-unused-prop-types": [2, {
+      "ignore": ["ref"]
+    }],
+    "react/require-default-props": 0,
+    "react/function-component-definition": [0, {
+      "namedComponenet": "function-expression"
+    }],
+    "jsx-quotes": [2, "prefer-single"],
+    "implicit-arrow-linebreak": 0,
+    "function-paren-newline": 0,
+    "prefer-promise-reject-errors": 1,
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": ["_id", "_isMounted"]
+      }
+    ],
+    "max-nested-callbacks": ["error", 4],
+    "max-params": ["error", 8],
+    "max-depth": ["error", 5],
+    "max-len": ["warn", 200],
+    "complexity": ["error", 32],
+    "class-methods-use-this": 0,
+    "import/no-unresolved": [
+      2,
+      {
+        "caseSensitive": false
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["draft", "req", "ctx", "state"]
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}
