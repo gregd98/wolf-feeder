@@ -1,7 +1,10 @@
 {
   "name": "front-end",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Indeveyes interview task - frontend",
+  "author": "Demény Gergely",
   "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
